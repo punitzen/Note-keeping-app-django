@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}
+My Notes
+{% endblock title %}
+
+{% block nav %}
+<div class="nav-end">
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'notes' %}?docid=0">New Document</a>
+    </li>
+</div>
+{% endblock nav %}
+
+{% block body %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+<section class="section">
+    <div class="columns">
+        <div class="column is-2">
+            <aside class="menu">
+                <p class="menu-label">Documents</p>
+                <ul class="menu-list">
+                    {% for doc in documents %}
+                    <li><a href="{% url 'notes' %}?docid={{doc.id}}">{{doc.title}}</a></li>
+                    {% endfor %}
+                </ul>
+            </aside>
+        </div>
+        <div class="column is-10">
+            <form action="{% url 'notes' %}" method="POST">
+                {%csrf_token%}
+                <input type="hidden" name="docid" value="{{docid}}">
+
+                <div class="field">
+                    <label class="label">
+                        Title
+
+                        {% if document %}
+                        <span class="has-text-grey-light">
+                            Created at : {{document.created_at|date:"m/d Y"}} /
+                            Modified at : {{document.modified_at|date:"m/d Y"}}
+                        </span>
+                        {% endif %}
+                    </label>
+                    <div class="control">
+                        <input type="test" class="input" name="title" placeholder="Title" {% if document %}
+                            value="{{ document.title }}" {%endif%}>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">
+                        Content
+                    </label>
+                    <div class="control">
+                        <textarea name="content" class="textarea"
+                            placeholder="Content">{% if document %}{{ document.content }}{%endif%}</textarea>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-primary">Save</button>
+                    </div>
+                    {% if document %}
+                    <div class="control">
+                        <a href="{% url 'delete-note' document.id %}" class="button is-danger">Delete</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}

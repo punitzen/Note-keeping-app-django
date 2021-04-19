@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+
+{% block title %}
+A Note Keeping
+{% endblock title %}
+
+{% block body %}
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+<!--First Block-->
+
+<div class="container my-4 px-0">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/cover.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="background-color: #202020;border-radius: 60px;">
+          <h3>We welcome you to the Singularity</h3>
+          <p style="font-size:20px">You are more than welcome to join us.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/digital-notes.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="background-color: #202020;border-radius: 60px;">
+          <h3>When everything gets Digital</h3>
+          <p style="font-size:20px">then why not your Notes</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/taking-notes.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="background-color: #202020;border-radius: 60px;">
+          <h3>Create your own Notes and ToDos List</h3>
+          <p style="font-size:20px">Notes Redifines at Singularity</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+
+  <!--Second Block Starts-->
+
+  <div class="row my-5">
+    <div class="col-lg-4">
+      <img src="/static/carasouel/deadline1.jfif" alt="" class="bd-placeholder-img rounded-circle" width="140"
+        height="140" aria-label="Placeholder: 140x140" focusable="false">
+      <h2>Never miss deadlines</h2>
+      <p>Through Singularity you can control almost all of your work and stay focus on your doing rather than
+        remembering.</p>
+    </div>
+    <div class="col-lg-4">
+      <img src="/static/carasouel/priority.jfif" alt="" class="bd-placeholder-img rounded-circle" width="140"
+        height="140" aria-label="Placeholder: 140x140" focusable="false">
+      <h2>Prioritize Your Work</h2>
+      <p>Through Singularity you can Prioritize your work and take a step ahead to work faster than your regular boring
+        alarm schedules.</p>
+    </div>
+    <div class="col-lg-4">
+      <img src="/static/carasouel/privacy.jfif" alt="" class="bd-placeholder-img rounded-circle" width="140"
+        height="140" aria-label="Placeholder: 140x140" focusable="false">
+      <h2>User Privacy</h2>
+      <p>We at Singularity thinks Privacy is a major concern and Privacy is important for all of us, We won't sell your
+        data</p>
+    </div>
+  </div>
+
+  <!-- START THE FEATURETTES -->
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Keep your Schedules <span class="text-muted">and done in Singularity manner.</span>
+      </h2>
+      <p class="lead">It's unique, one of the Kind. Singularity for all of us. </p>
+    </div>
+    <div class="col-md-5">
+      <img src="https://source.unsplash.com/1600x900/?singularity" alt=""
+        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+        aria-label="Placeholder: 500x500" focusable="false">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">Singularity is really good. <span class="text-muted">See for yourself.</span></h2>
+      <p class="lead">Customers are loving this.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img src="https://source.unsplash.com/1600x900/?notes" alt=""
+        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+        aria-label="Placeholder: 500x500" focusable="false">
+    </div>
+  </div>
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">All of our Resources <span class="text-muted">are Free.</span>
+      </h2>
+      <p class="lead">Contribute to our Open Source Platform. </p>
+    </div>
+    <div class="col-md-5">
+      <img src="https://source.unsplash.com/1600x900/?code" alt=""
+        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+        aria-label="Placeholder: 500x500" focusable="false">
+    </div>
+  </div>
+  <hr class="featurette-divider">
+
+  <!-- /END THE FEATURETTES -->
+
+  <!-- Third Block -->
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Singularity - Admin</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">Feb 2</div>
+          <p class="card-text mb-auto">Admin's First Post</p>
+          <a href="https://youtu.be/dQw4w9WgXcQ" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="https://source.unsplash.com/1600x900/?notes" class="bd-placeholder-img" width="200" height="250"
+            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Author</strong>
+          <h3 class="mb-0">Team Behind Singularity</h3>
+          <div class="mb-1 text-muted">Jan 21</div>
+          <p class="mb-auto">See what the Minds Behind Singularity got to Say to its Users and Contributers.</p>
+          <a href="https://youtu.be/dQw4w9WgXcQ" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="https://source.unsplash.com/1600x900/?digital" class="bd-placeholder-img" width="200" height="250"
+            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="featurette-divider">
+<!-- FOOTER -->
+<footer class="container">
+  <p class="float-end"><a href="#">Back to top</a></p>
+  <p>&copy; 2020-2021 Singularity, Inc. &middot; <a href="/contact">Privacy</a> &middot; <a href="/contact">Terms</a>
+  </p>
+</footer>
+</main>
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>
+</div>
+
+{% endblock body %}
