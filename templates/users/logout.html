@@ -5,13 +5,65 @@ Logout User
 {% endblock title %}
 
 {% block body %}
-    
-<div class="container mx-2 my-4">
-	<h1>Logged Out</h1>
-	<p>You have been successfully logged out of your account.</p>
-	<p>
-		<a class="btn btn-primary btn-lg p-1" href="/login"><i class="fa fa-user"></i> Log in again</a>
-	</p>
+
+<style>
+	.big-container{
+		width:100%;
+		height: 93vh;
+		display: flex;
+		justify-content: center;
+		background-color: rgb(245, 233, 228);
+	}
+	.my-container{
+		display: flex;
+		align-self: center;
+		background-color: rgb(251, 239, 226);
+		justify-content: space-around;
+		width:90%;
+		height: 80%;
+		border: 1px solid rgb(141, 122, 122) ; 
+		border-radius: 10px;
+	}
+	.my-container-i {
+		align-self: center;
+		width: 70%;
+		margin:2%;
+		color: rgb(141, 122, 122);
+		padding: 5%;
+
+	}
+	.logout-img{
+		width: 100%;
+		height: auto;
+		padding: 1%;
+	}
+	@media screen and (max-width:728px) {
+		.my-container{
+			flex-direction: column-reverse;
+		}
+		.my-container-i{
+			width: 100%;
+			text-align: center;
+		}
+		.big-container{
+			height: 95vh;
+
+		}
+	}
+</style>
+<div class="big-container">
+	<div class="my-container">
+
+		<div class="my-container-i">
+			<h1>Logged Out</h1>
+			<p>You have been successfully logged out of your account.</p>
+			<p>
+				<a class="btn btn-primary btn-lg p-1" href="/login" style="background-color: rgb(255, 138, 128);"><i class="fa fa-user"></i> Log in again</a>
+			</p>
+		</div>
+		<img src="https://image.freepik.com/free-vector/illustration-style-with-people-waving-hand_52683-30058.jpg" alt="" class="logout-img">
+	
+	</div>
 </div>
 
 {% endblock body %}
