@@ -7,36 +7,81 @@ Profile
 {% block body %}
 
 <style>
-    .content-section {
+    .my-content-section {
+        padding:2%;
         background: #ffffff;
-        padding: 10px 20px;
-        border: 1px solid #dddddd;
-        border-radius: 3px;
+        border: 1px solid #bbb4b4;
+        border-radius: 10px;
         margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        width:90%;
+        align-self: center;
+        justify-content: space-evenly;
     }
 
-    .account-img {
-        height: 125px;
-        width: 125px;
-        margin-right: 20px;
-        margin-bottom: 16px;
+    .accImg {
+        object-fit: cover;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
     }
 
     .account-heading {
         font-size: 2.5rem;
     }
+    .my-media{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .media-body{
+        text-align: center;
+        margin-top: 10%;
+    }
+    .my-form{
+        margin-left: 5%;
+        width:70%;
+    }
+    .my-container{
+        display: flex;
+        justify-content: center;
+        height: 94vh;
+        background-color: rgb(218, 209, 218);
+    }
+    @media screen and (max-width:728px) {
+        .my-content-section{
+            flex-direction: column;
+        }
+        .accImg{
+            width:200px;
+            height: 200px;
+        }
+        .my-media{
+            width: 100%;
+        }
+        .my-form{
+            width: 90%;
+        }
+        .my-container{
+            height: 100%;
+            padding-top: 2%;
+        }
+    }
 </style>
 
-<div class="container my-4">
-    <div class="content-section">
-        <div class="media">
-            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+<div class="my-container">
+    <div class="my-content-section">
+        <div class="my-media">
+            <img class="accImg" src="{{ user.profile.image.url }}">
             <div class="media-body">
                 <h2 class="account-heading">{{ user.username }}</h2>
                 <p class="text-secondary">{{ user.email }}</p>
             </div>
         </div>
-        <form method="POST" enctype="multipart/form-data">
+        <form class="my-form" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">
