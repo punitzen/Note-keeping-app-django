@@ -14,50 +14,94 @@ A Note Keeping
     user-select: none;
   }
 
-  @media (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
+    .carousel-caption{
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+    .heading{
+      padding-top: 0 !important; 
+
+    }
+   
   }
+  .col-lg-4{
+    text-align: center;
+  }
+
+  .carousel-caption{
+    /* background-color: none; */
+    color: white;
+    position: static;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  .carousel-indicators li {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  .heading{
+    width: 100%;
+    padding-top: 150px;
+  }
+  
 </style>
 <!--First Block-->
 
 <div class="container my-4 px-0">
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-    </ol>
+    
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/static/cover.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block" style="background-color: #202020;border-radius: 60px;">
-          <h3>We welcome you</h3>
-          <p style="font-size:20px">You are more than welcome to join us.</p>
+        <!-- <img src="/static/cover.jpg" class="d-block w-100" alt="..."> -->
+        <div class="carousel-caption" >
+          <div class="heading" style="background-color:rgb(180, 192, 240)">
+            <h3>We welcome you</h3>
+            <p style="font-size: 20px;">You are more than welcome to join us.</p>
+          </div>
+          <img src="https://image.freepik.com/free-vector/people-say-hi-hello-different-languages-greetings-world-persons-communicating-people-illustration_102902-1818.jpg" alt="">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/static/digital-notes.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block" style="background-color: #202020;border-radius: 60px;">
-          <h3>When everything gets Digital</h3>
-          <p style="font-size:20px">then why not your Notes</p>
+        <!-- <img src="https://static.vecteezy.com/system/resources/previews/000/113/922/non_2x/free-ereader-vector-illustrations.jpg" class="d-block w-100" alt="..."> -->
+        <div class="carousel-caption" >
+          <div class="heading" style="background-color:rgb(0, 169, 137)">
+            <h3>When everything gets Digital</h3>
+            <p style="font-size:20px">then why not your Notes</p>
+          </div>
+          <img src="https://static.vecteezy.com/system/resources/previews/000/113/922/non_2x/free-ereader-vector-illustrations.jpg" alt="">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="/static/taking-notes.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block" style="background-color: #202020;border-radius: 60px;">
-          <h3>Create your own Notes and ToDos List</h3>
-          <p style="font-size:20px">Notes Redifines</p>
+        <!-- <img src="/static/taking-notes.jpg" class="d-block w-100" alt="..."> -->
+        <div class="carousel-caption">
+          <div class="heading" style="background-color:rgb(118, 187, 246)">
+            <h3>Create your own Notes and ToDos List</h3>
+            <p style="font-size:20px">Notes Redifines</p>
+          </div>
+          <img src="https://image.freepik.com/free-vector/businesswoman-standing-long-list-big-task-document-people-looking-paper-sheet-isolated-isometric-illustration_277904-1065.jpg" alt="">
         </div>
       </div>
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+      </ol>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </a>
   </div>
@@ -65,22 +109,22 @@ A Note Keeping
   <!--Second Block Starts-->
 
   <div class="row my-5">
-    <div class="col-lg-4">
-      <img src="/static/carasouel/deadline1.jfif" alt="" class="bd-placeholder-img rounded-circle" width="140"
+    <div class="col-lg-4" >
+      <img src="https://image.freepik.com/free-vector/human-hand-holding-stopwatch_74855-15463.jpg" alt="" class="bd-placeholder-img rounded-circle" width="140"
         height="140" aria-label="Placeholder: 140x140" focusable="false">
       <h2>Never miss deadlines</h2>
       <p>Through Our Note Keep you can control almost all of your work and stay focus on your doing rather than
         remembering.</p>
     </div>
     <div class="col-lg-4">
-      <img src="/static/carasouel/priority.jfif" alt="" class="bd-placeholder-img rounded-circle" width="140"
+      <img src="https://static.vecteezy.com/system/resources/previews/002/118/250/non_2x/set-work-priority-task-management-concept-vector.jpg" alt="" class="bd-placeholder-img rounded-circle" width="140"
         height="140" aria-label="Placeholder: 140x140" focusable="false">
       <h2>Prioritize Your Work</h2>
       <p>Through Our Note Keep you can Prioritize your work and take a step ahead to work faster than your regular boring
         alarm schedules.</p>
     </div>
     <div class="col-lg-4">
-      <img src="/static/carasouel/privacy.jfif" alt="" class="bd-placeholder-img rounded-circle" width="140"
+      <img src="https://image.freepik.com/free-vector/cloud-storage-idea-online-computing-internet-database-backup-server-programming-equipment-limited-access-control-pass-privacy-settings-vector-isolated-concept-metaphor-illustration_335657-2206.jpg" alt="" class="bd-placeholder-img rounded-circle" width="140"
         height="140" aria-label="Placeholder: 140x140" focusable="false">
       <h2>User Privacy</h2>
       <p>We thinks Privacy is a major concern and Privacy is important for all of us, We won't sell your
@@ -99,7 +143,7 @@ A Note Keeping
       <p class="lead">It's unique, one of the Kind.</p>
     </div>
     <div class="col-md-5">
-      <img src="https://source.unsplash.com/1600x900/?singularity" alt=""
+      <img src="https://static.vecteezy.com/system/resources/previews/002/046/053/non_2x/businessman-thinking-about-time-management-and-business-strategy-illustration-vector.jpg" alt=""
         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
         aria-label="Placeholder: 500x500" focusable="false">
     </div>
@@ -113,7 +157,7 @@ A Note Keeping
       <p class="lead">Customers are loving this.</p>
     </div>
     <div class="col-md-5 order-md-1">
-      <img src="https://source.unsplash.com/1600x900/?notes" alt=""
+      <img src="https://static.vecteezy.com/system/resources/previews/002/188/446/non_2x/team-success-recognition-reward-for-teamwork-to-achieve-business-goal-victory-for-coworkers-to-complete-work-mission-concept-happiness-success-businessmen-and-women-team-holding-winning-trophy-cup-vector.jpg" alt=""
         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
         aria-label="Placeholder: 500x500" focusable="false">
     </div>
@@ -127,7 +171,7 @@ A Note Keeping
       <p class="lead">Contribute to our Open Source Platform. </p>
     </div>
     <div class="col-md-5">
-      <img src="https://source.unsplash.com/1600x900/?code" alt=""
+      <img src="https://static.vecteezy.com/system/resources/previews/000/228/383/non_2x/isometric-teamwork-vol-3-vector.jpg" alt=""
         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
         aria-label="Placeholder: 500x500" focusable="false">
     </div>

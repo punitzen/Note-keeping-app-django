@@ -7,25 +7,69 @@ Login User
 
 {% block body %}
 
-<div class="container my-4">
-    <div class="content-section my-4 mx-5">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">
-                    Log In
-                </legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info my-3" type="submit">Sign in</button>
+<style>
+    .my-container{
+        width:100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        height: 93vh;
+        background-color: rgb(247, 241, 231);
+    }
+    .my-img{
+        width:100%;
+        height: auto;
+    }
+   
+    .my-content-section{
+        align-self: center;
+        width:69%;
+    }
+    .my-container-i{
+        display: flex;
+        flex-direction: row-reverse;
+        align-self: center;
+        width : 90%;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 10px;
+        padding:5%;
+        background-color: white;
+    }
+    @media screen and (max-width:728px) {
+        .my-container-i{
+            flex-direction: column-reverse;
+            height: 95%;
+        }
+        .my-content-section{
+            width: 100%;
+        }
+    }
+    
+</style>
+
+<div class="my-container">
+    <div class="my-container-i">
+        <div class="my-content-section">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">
+                        Log In
+                    </legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-info my-3" type="submit">Sign in</button>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Need an Account? <a href="/register">Sign Up</a>
+                </small>
             </div>
-        </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Need an Account? <a href="/register">Sign Up</a>
-            </small>
         </div>
+        <img class="my-img" src="https://image.freepik.com/free-vector/online-registration-sign-up-with-man-sitting-near-smartphone_268404-95.jpg" alt="">
     </div>
 </div>
 {% endblock body %}
