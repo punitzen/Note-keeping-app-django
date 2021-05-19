@@ -6,8 +6,6 @@ docutils==0.16
 idna==2.7
 imagesize==1.2.0
 itsdangerous==1.1.0
-Pillow==5.2.0
 python-dateutil==2.8.1
 requests==2.19.1
-six==1.12.0
 urllib3==1.23
