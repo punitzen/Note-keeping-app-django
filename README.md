@@ -1,4 +1,7 @@
 ### Note Keeping App
+
+![demo gif](media/note_keep.gif)
+
 Use ```python3``` instead of ```python``` if neccessary
 
 Install all the dependencies 
